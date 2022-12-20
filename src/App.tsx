@@ -88,8 +88,8 @@ const App: Component = () => {
       const geometry = new SphereGeometry(0.025, 12, 12);
       const matrix = new Matrix4();
 
-      console.log(pointDataArray);
-      console.log(activeTags());
+      //console.log(pointDataArray);
+      //console.log(activeTags());
 
       const filtered = [];
       // this HAS to be optimized in the future, not care now ._.
@@ -97,7 +97,7 @@ const App: Component = () => {
         pointDataArray.filter((point) => point.tag == it).forEach((point) => filtered.push(point));
       });
 
-      console.log(filtered);
+      //console.log(filtered);
 
       const mesh = new InstancedMesh(geometry, nothingMaterial, filtered.length);
 
@@ -217,8 +217,7 @@ const App: Component = () => {
               : '∞ eternities ago'}
           </div>
           <div class="font-mono">
-            {selectedPoint()?.x?.toFixed(4) || '0'} {selectedPoint()?.y?.toFixed(4) || '0'}{' '}
-            {selectedPoint()?.z?.toFixed(4) || '0'}
+            {selectedPoint()?.x || '0'} {selectedPoint()?.y || '0'} {selectedPoint()?.z || '0'}
           </div>
           <div>Hit: {selectedPoint()?.hit ? 'yeah' : 'nah'}</div>
           <div>Uncertainty: {selectedPoint()?.uncertainty || '0'}</div>

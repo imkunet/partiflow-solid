@@ -36,7 +36,7 @@ export const createScene = (): RenderContext => {
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.minDistance = 0.2;
-  controls.maxDistance = 10;
+  controls.maxDistance = 20;
   controls.update();
 
   const pickingScene = new Scene();
