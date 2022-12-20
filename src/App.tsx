@@ -217,8 +217,8 @@ const App: Component = () => {
               : '∞ eternities ago'}
           </div>
           <div class="font-mono">
-            {selectedPoint()?.x.toFixed(4) || '0'} {selectedPoint()?.y.toFixed(4) || '0'}{' '}
-            {selectedPoint()?.z.toFixed(4) || '0'}
+            {selectedPoint()?.x?.toFixed(4) || '0'} {selectedPoint()?.y?.toFixed(4) || '0'}{' '}
+            {selectedPoint()?.z?.toFixed(4) || '0'}
           </div>
           <div>Hit: {selectedPoint()?.hit ? 'yeah' : 'nah'}</div>
           <div>Uncertainty: {selectedPoint()?.uncertainty || '0'}</div>
